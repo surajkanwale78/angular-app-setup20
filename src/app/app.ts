@@ -11,4 +11,5 @@ import { Child } from './child/child';
 })
 export class App {
   protected readonly title = signal('angular-app-setup20');
+  name = "Suraj";
 }

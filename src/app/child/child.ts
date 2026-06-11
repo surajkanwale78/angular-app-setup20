@@ -1,4 +1,4 @@
-import { Component,Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-child',
   standalone: true,
@@ -7,5 +7,5 @@ import { Component,Input } from '@angular/core';
   styleUrl: './child.css',
 })
 export class Child {
-
+@Input() userName!: string;
 }
