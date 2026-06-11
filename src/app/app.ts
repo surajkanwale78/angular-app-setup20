@@ -1,6 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Child } from './child/child';
+import { DataService } from './services/data.service';
 
 @Component({
   selector: 'app-root',
@@ -11,4 +12,9 @@ import { Child } from './child/child';
 })
 export class App {
   protected readonly title = signal('angular-app-setup20');
+  
+  constructor(private dataService: DataService) {}
+  updateName() {
+    this.dataService.userName.next('Suraj');
+  }
 }
